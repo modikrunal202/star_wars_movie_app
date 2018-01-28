@@ -1,0 +1,259 @@
+/* --------------------------
+General Styles 
+----------------------------- */
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 400;
+	color: #333;
+}
+
+.content-padding {
+	padding-left: 11%;
+	padding-right: 11%;
+}
+
+
+
+/* --------------------------
+Hero Image / Title Styles 
+----------------------------- */
+#title-img {
+	background-image: url('../images/star_war2.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 550px;
+	position: relative;
+}
+
+#title-img::before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;	
+	height: 100%;
+	background: rgba(0,0,0,0.15);
+	content: "";
+}
+
+#hero-title {
+	position: absolute;
+	background-color: #fff;
+	padding: 25px 60px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  bottom: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.20em;
+  letter-spacing: 0.4px;
+
+}
+
+
+/* ---------------------------------------
+Navbar and Navigation Styles / Overrides 
+------------------------------------------ */
+.navbar-nav{
+	background-color: transparent;
+}
+.navbar-nav li a {
+	color:#000;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+	font-size: 14px;
+}
+
+.dropdown .dropdown-menu a{
+	transition: 0.5s ease-in-out;
+	text-decoration: none;
+	color: #fff;
+}
+
+.dropdown-menu{
+	background-color: transparent;
+	
+}
+.dropdown .dropdown-menu a:hover {
+	color: #05294bfa;
+    text-decoration: none;
+}
+.navbar-nav > li:first-child {
+	margin-right: 25px;
+}
+
+
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+	background-color: transparent;
+}
+.navbar-nav>li>.dropdown-menu {
+	background-color: rgba(0,0,0,0.5);
+}
+
+
+/* -----------------------------
+Home Page Posters Styles 
+-------------------------------- */
+
+#poster-wrapper{
+	padding-top: 5px;
+	margin-left: 6%;
+	margin-right: auto;
+}
+.poster {
+	width: 30%;
+	margin-top: 55px;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	display: inline-block;
+	position: relative;
+	background-size: 100%;
+	transition: 0.5s;
+}
+
+.poster:hover{
+	background-size: 110%;
+}
+.poster-info{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.7);
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+	padding: 30px 35px;
+}
+.poster-info h3 {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 20px;
+  	letter-spacing: 0.3px;
+  	color: #fff;
+  	margin: 0px;
+}
+.poster .img-thumbnail{
+	background-color: #ffe3b3;
+}
+.poster-info h4 {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 15px;
+  	letter-spacing: 0.3px;
+  	color: #fff;
+	margin: 0px;
+	margin-top: 15px;  
+}
+
+.poster:hover .poster-info{
+	opacity: 1;
+}
+
+
+/* -----------------------------
+Single Page Posters Styles 
+-------------------------------- */
+
+
+#title-img-single{
+	/* background-image: url('../images/star_war.jpg'); */
+	background-color: #333;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 550px;
+	position: relative;
+}
+
+
+
+
+/* ---------------------------------------
+Movie-Single Poster and Description Styles 
+------------------------------------------ */
+.poster-wrapper {
+	margin-top: 50px;
+}
+.poster-single{
+	/* width: 50%; */
+	margin-left: 25px;
+
+}
+
+.description-wraper{
+	margin-right: 150px;
+}
+
+.movie-header{
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1em;
+	letter-spacing: 0.4px;
+	padding: 15px 25px;
+	border: 2px solid #333;
+	display: inline-block;
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
+.description-wrapper p {
+	line-height: 1.95;
+	letter-spacing: 0.3px;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+.main-characters{
+	list-style: none;
+	display: inline-block;
+	margin-right: 40px;
+	letter-spacing: 0.3px;
+	font-size: 16px;	
+	margin-bottom: 15px;
+
+}
+.description-wrapper ul{
+	padding-left: 0px;
+}
+
+
+/* -----------------------------
+Footer Styles 
+-------------------------------- */
+
+footer{
+	margin-top: 50px;
+}
+
+footer p {
+	color:  #999;
+	letter-spacing: 0.3px;
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+
+footer .social-media-icons i {
+	font-size: 24px;
+	color: #999;
+	transition: 0.5s ease-in-out;
+}
+
+footer .social-media-icons a:first-child {
+	margin-right: 20px;
+}
+
+footer .social-media-icons a:last-child:hover i {
+	color: #d34836;
+}
+
+footer .social-media-icons a:first-child:hover i {
+	color: #3b5998	;
+}
+

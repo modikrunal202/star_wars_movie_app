@@ -1,0 +1,22 @@
+extends layout
+
+block content
+	- var movieDetail = movies
+	#title-img
+		h1#hero-title #{title}
+	.container-fluid
+		#poster-wrapper
+			each i in movieDetail
+				.poster
+					a(href="/star_wars_episode/"+i.episode_number)
+						img.img-thumbnail(src="/images/"+i.poster, alt=alter)
+						.poster-info
+							h3= i.title
+							h4
+								| View More 
+								i.fas.fa-arrow-right
+
+
+
+					
+

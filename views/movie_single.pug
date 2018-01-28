@@ -1,0 +1,30 @@
+extends layout
+	
+block content
+	- var movieDetail = movies
+	- var movieTitle = title
+	- var posterUrl = poster_url
+	- var mainCharacter = main_character
+	- var heroImgUrl = "/images/" + hero_img_url
+	
+	#title-img-single(style="background-image:"+"url("+heroImgUrl+")")
+		h1#hero-title #{title}
+	.container
+		.row.poster-wrapper 
+			.col-md-4
+				.poster-single
+					//- h3 #{posterUrl}
+					img.img-thumbnail(src="/images/"+posterUrl, alt=movieTitle)
+			.col-md-8
+				.description-wrapper
+					h2.movie-header Description
+					p #{description}
+
+					h2.movie-header Main Characters
+					ul 
+						each character in mainCharacter
+							li.main-characters #{character}	
+
+
+					
+		

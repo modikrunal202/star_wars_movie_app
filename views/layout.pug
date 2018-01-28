@@ -1,0 +1,48 @@
+doctype html
+html
+	head
+		title= title
+		
+		link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css")
+		link(href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400i,700,700i', rel='stylesheet')
+		link(href='https://use.fontawesome.com/releases/v5.0.6/css/all.css', rel='stylesheet')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+	body()
+		- var movieDetail = movies
+		
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown',aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarNavDropdown.collapse.navbar-collapse
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href='/') Home 
+							span.sr-only (current)			
+					li.nav-item.dropdown
+						a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Movies
+						.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+							each i in movieDetail
+									a.dropdown-item(href="/star_wars_episode/"+i.episode_number)= i.title
+
+		block content
+		footer.content-padding
+			.row
+				.col-md-6.text-left
+					p © Star Wars
+				.col-md-6.text-right.social-media-icons
+					a(href='#' data-toggle="tooltip" data-placement="bottom" title="Facebook")
+						i.fab.fa-facebook-f
+					a(href='#' data-toggle="tooltip" data-placement="bottom" title="Google Plus")
+						i.fab.fa-google-plus-g
+
+
+
+script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
+script.
+	$( function(){
+	$("[data-toggle='tooltip'").tooltip();
+	});
+
